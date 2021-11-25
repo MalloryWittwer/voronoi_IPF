@@ -34,6 +34,7 @@ body {
 
 #canvas {
   background-color: var(--theme);
+  min-width: 200px;
   max-width: 840px;
   display: flex;
   justify-content: center;

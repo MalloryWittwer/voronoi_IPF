@@ -68,7 +68,7 @@ def serve_layout():
         ], id="content-container"),
         html.Div([
             html.A("About", id="about", n_clicks=0),
-            html.A("View code", id="code", href="#", target="_blank"),
+            html.A("View code", id="code", href="https://github.com/MalloryWittwer/voronoi_IPF", target="_blank"),
             dbc.Modal([
                 dbc.ModalBody("In a face-centered cubic material, the orientation distribution of a generic property of interest (ex: misorientation) of the crystallites is displayed. The value of the property is averaged locally in the orientation space, within discrete bins defined by the stereographic projection of a Fibonacci sphere and confined in the inverse pole figure triangle."),
                 html.Img(src="assets/figure-about.png", id="modal-image"),
