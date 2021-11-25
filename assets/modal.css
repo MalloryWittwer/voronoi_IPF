@@ -1,0 +1,24 @@
+#modal-footer,
+#modal-footer * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#close {
+  background-color: #222222;
+  color: white;
+  border: 2px solid white;
+  width: 100px;
+}
+
+#close:hover {
+  background-color: #464646;
+  color: white;
+  border: 1px solid white;
+}
+
+#modal-image {
+  padding: 10px;
+}

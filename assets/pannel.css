@@ -1,0 +1,156 @@
+#pannel {
+  display: grid;
+
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  height: 300px;
+  margin: 0 20px;
+
+  background-color: var(--theme);
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: white;
+}
+
+#pannel:first-child {
+  padding-top: 20px;
+}
+
+#grid-container-r1 {
+  grid-row: 1;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#grid-container-r2 {
+  grid-row: 2;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#grid-min-max {
+  grid-row: 3;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#min-container,
+#max-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#grid-min-max input {
+  width: 80px;
+  background-color: var(--theme);
+  color: white;
+}
+
+#grid-min-max label {
+  margin: 0 5px;
+}
+
+#grid-colormap {
+  grid-row: 4;
+  justify-self: center;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+}
+
+#line-width-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lw-label {
+  height: 25px;
+}
+
+#colormap-dropdown {
+  width: 120px;
+  padding: 0 5px;
+  color: white;
+}
+
+.Select-control {
+  background-color: rgb(25, 25, 25) !important;
+}
+
+.Select-menu-outer {
+  background-color: rgb(25, 25, 25);
+}
+
+.Select-value-label {
+  color: white !important;
+}
+
+#radio-items {
+  justify-self: left;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#radio-items > * {
+  padding: 0 5px;
+}
+
+#tiles-container {
+  justify-self: left;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#tiles-label,
+#tiles-label-many {
+  justify-self: right;
+  align-self: center;
+}
+
+#radios-label {
+  justify-self: right;
+  align-self: center;
+}
+
+#tiles-label,
+#radios-label {
+  padding: 0 5px;
+}
+
+.rc-slider-tooltip-inner {
+  background-color: var(--theme);
+}
+
+#tiles-label,
+#tiles-label-many,
+#radios-label {
+  height: 30px;
+}
+
+#input-tiles {
+  width: 120px;
+}
+
+#checklist {
+  padding-left: 10px;
+  padding-right: 25px;
+  justify-self: center;
+  align-self: center;
+}

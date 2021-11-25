@@ -1,0 +1,62 @@
+@import url("pannel.css");
+@import url("modal.css");
+
+:root {
+  --theme: black;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--theme);
+  height: 100vh;
+  font-size: 16px;
+}
+
+#content-wrapper {
+  margin: 40px;
+  margin-bottom: 0;
+  background-color: var(--theme);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+#content-container {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme);
+  flex-wrap: wrap;
+}
+
+#canvas {
+  background-color: var(--theme);
+  max-width: 840px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#plt-figure {
+  width: 100%;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-container a {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+}
+
+#footer-container a:hover {
+  color: #abe2fb;
+}
