@@ -1,41 +1,60 @@
 #pannel {
-  display: grid;
-
-  width: 300px;
-  min-width: 300px;
-  max-width: 300px;
-  height: 300px;
-  margin: 0 20px;
-
-  background-color: var(--theme);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: inherit;
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 8px;
   color: white;
 }
 
-#pannel:first-child {
-  padding-top: 20px;
+.grid-row {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#upload {
+  width: 100%;
+  height: 60px;
+  width: 300px;
+  line-height: 60px;
+  border-width: 1px;
+  border-style: dashed;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#select-link {
+  color: #abe2fb;
+}
+
+#select-link:hover {
+  color: #8fdbff;
 }
 
 #grid-container-r1 {
-  grid-row: 1;
-  display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: space-between;
 }
 
 #grid-container-r2 {
-  grid-row: 2;
-  display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
 }
 
 #grid-min-max {
-  grid-row: 3;
-  display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#grid-colormap {
+  justify-content: center;
 }
 
 #min-container,
@@ -49,23 +68,14 @@
 #grid-min-max input {
   width: 80px;
   background-color: var(--theme);
-  color: white;
+}
+
+#max-input, #min-input {
+  color: white !important;
 }
 
 #grid-min-max label {
   margin: 0 5px;
-}
-
-#grid-colormap {
-  grid-row: 4;
-  justify-self: center;
-  align-self: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding-bottom: 20px;
 }
 
 #line-width-container {
@@ -79,9 +89,8 @@
 }
 
 #colormap-dropdown {
-  width: 120px;
-  padding: 0 5px;
-  color: white;
+  flex-grow: 1;
+  padding: 0 10px;
 }
 
 .Select-control {
@@ -97,25 +106,25 @@
 }
 
 #radio-items {
-  justify-self: left;
-  align-self: center;
-
   display: flex;
   align-items: center;
   justify-content: left;
+}
+
+#radio-label {
+  padding: 0px 10px;
 }
 
 #radio-items > * {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 #tiles-container {
-  justify-self: left;
-  align-self: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  align-self: flex-start;
+  width: 100%;
+  padding: 0px 10px;
+  padding-left: 0px;
+  box-sizing: border-box;
 }
 
 #tiles-label,
@@ -145,7 +154,9 @@
 }
 
 #input-tiles {
-  width: 120px;
+  width: 100%;
+  margin: 0px 5px;
+  padding: 0px !important;
 }
 
 #checklist {

@@ -9,7 +9,10 @@ import matplotlib.pyplot as plt
 from scipy.spatial import voronoi_plot_2d
 
 app = dash.Dash(__name__, title='IPF Plot Experiment', 
-                external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes.CYBORG])
+                external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css', dbc.themes.CYBORG],
+                meta_tags=[{'name': 'viewport', 
+                            'content': 'width=device.width, initial_scale=1.0'}]
+                )
 
 server = app.server
 
@@ -20,13 +23,19 @@ def serve_layout():
     layout = html.Div([
         html.Div([
             html.Div([
+                html.Div([    
+                    dcc.Upload([
+                        'Drag and Drop or ',
+                        html.A('Select a File', id="select-link")
+                    ], id="upload")
+                ], id="upload-container", className="grid-row"),
                 html.Div([
                     html.Img(src="assets/hexagons-white.png", id="tiles-label"),
                     html.Div([
                         dcc.Slider(id="input-tiles", min=100, max=800, step=100, value=400, tooltip={"placement": "bottom", "always_visible": True}),
                     ], id="tiles-container"),
                     html.Img(src="assets/hexagons-white-many.png", id="tiles-label-many"),
-                ], id="grid-container-r1"),
+                ], id="grid-container-r1", className="grid-row"),
                 html.Div([  
                     html.Img(src="assets/3d-cube-white.png", id="radios-label"),
                     dcc.RadioItems(
@@ -35,7 +44,7 @@ def serve_layout():
                             {'label': 'Y', 'value': 'y'},
                             {'label': 'Z', 'value': 'z'}
                         ], value='z', id="radio-items"),
-                ], id="grid-container-r2"),
+                ], id="grid-container-r2", className="grid-row"),
                 html.Div([
                     html.Div([
                         html.Label("Min", htmlFor="min-input", id="min-label"),
@@ -45,7 +54,7 @@ def serve_layout():
                         html.Label("Max", htmlFor="max-input", id="max-label"),
                         dcc.Input(type="number", value=20, id="max-input")
                     ], id="max-container"),
-                ], id="grid-min-max"),
+                ], id="grid-min-max", className="grid-row"),
                 html.Div([
                     html.Div([
                         html.Img(src="assets/icon-lw.png", id="lw-label"),
@@ -60,7 +69,7 @@ def serve_layout():
                             {'label': 'Inferno', 'value': 'inferno'},
                         ], value='Blues',
                     ),
-                ], id="grid-colormap"),
+                ], id="grid-colormap", className="grid-row"),
             ], id="pannel"),
             html.Div([
                 dcc.Loading(id="loading", type="default", children=html.Img(src="assets/default_img.png", id="plt-figure"))
