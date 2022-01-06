@@ -1,1 +1,1 @@
-Plotting crystal orientation density in the Inverse Pole Figure (IPF) triangle. Web app demo available [here]().
+Plotting misorientation as a function of orientation in the Inverse Pole Figure (IPF).

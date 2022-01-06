@@ -23,3 +23,7 @@
 #modal-image {
   padding: 10px;
 }
+
+#modal-body {
+  text-align: justify;
+}

@@ -79,7 +79,7 @@ def serve_layout():
             html.A("About", id="about", n_clicks=0),
             html.A("View code", id="code", href="https://github.com/MalloryWittwer/voronoi_IPF", target="_blank"),
             dbc.Modal([
-                dbc.ModalBody("In a face-centered cubic material, the orientation distribution of a generic property of interest (ex: misorientation) of the crystallites is displayed. The value of the property is averaged locally in the orientation space, within discrete bins defined by the stereographic projection of a Fibonacci sphere and confined in the inverse pole figure triangle."),
+                dbc.ModalBody("In a face-centered cubic material, the orientation distribution of misorientation of a large number of crystallites is displayed. The value is averaged in discrete cells that represent equal partitions of the orientation space. The data was gathered in 2021 by Mallory Wittwer in Prof. Matteo Seita\'s group at NTU.", id="modal-body"),
                 html.Img(src="assets/figure-about.png", id="modal-image"),
                 dbc.ModalFooter(
                     dbc.Button("Close", id="close", className="mr-auto", n_clicks=0), 
