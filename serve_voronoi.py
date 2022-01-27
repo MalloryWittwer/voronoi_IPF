@@ -20,7 +20,7 @@ def fig_to_uri(fig, close_all=True):
     return "data:image/png;base64,{}".format(encoded)
 
 def compute_vectors(eulers, direction):
-
+    
     def vector_project(vect):
         rZ = np.empty(vect.shape[0])
         theZ = np.empty(vect.shape[0])
@@ -63,8 +63,7 @@ def compute_vectors(eulers, direction):
     elif direction=='x':
         yes, xes = vector_project(xv)
     else:
-        print(f'Wrong direction: {direction}')
-        return 0
+        yes, xes = vector_project(zv)
     
     x_points = np.vstack((xes, yes)).T
     
@@ -118,3 +117,15 @@ def get_voronoi(n_fib_tiles):
     points = np.array(points)
     vor = Voronoi(points)
     return vor
+
+
+if __name__ == '__main__':
+    coords001 = compute_vectors(np.array([[0, 0, 0]]), 'z')
+    coords011 = compute_vectors(np.radians(np.array([[0, 45, 0]])), 'z')
+    coords111 = compute_vectors(np.radians(np.array([[0, 45, 36.5]])), 'z')
+        
+    import matplotlib.pyplot as plt
+    u = np.vstack([coords001, coords011, coords111])
+    plt.scatter(u[:,0], u[:,1])
+    plt.show()
+    
